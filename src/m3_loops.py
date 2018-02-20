@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  FOR and WHILE loops.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Patrick Vedova.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -45,7 +45,7 @@ def main():
 def run_test_practice_problem3():
     """ Tests the   practice_problem3  function. """
     ####################################################################
-    # TODO: 2. Implement this TEST function.
+    # Done: 2. Implement this TEST function.
     #   It TESTS the  practice_problem3  function defined below.
     #   Include at least ** 2 ** ADDITIONAL tests beyond those we wrote.
     #
@@ -134,6 +134,26 @@ def run_test_practice_problem3():
     # SUGGESTION: Ask an assistant to CHECK your tests to confirm
     #             that they are adequate tests!
     ####################################################################
+    print()
+    print('--------------------------------------------------')
+    print('Testing the   practice_problem3   function:')
+    print('--------------------------------------------------')
+
+    # Test 15:
+    expected1 = [0]
+    actual = practice_problem3(-1, 1, 0.5)
+    print()
+    print('Test 15:')
+    print('  Expected:', expected1)
+    print('  Actual:  ', actual)
+
+    # Test 16:
+    expected2 = [1, 7, 13]
+    actual = practice_problem3(-2, 3, 1.2)
+    print()
+    print('Test 16:')
+    print('  Expected:', expected2)
+    print('  Actual:  ', actual)
 
 
 def practice_problem3(start, n, threshold):
@@ -216,6 +236,16 @@ def practice_problem3(start, n, threshold):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   < 15 minutes.
     ####################################################################
+    list = []
+    for k in range(start, 3000000, 1):
+        if n == 0:
+            break
+        if math.sin(k) + math.cos(k) > threshold:
+            list = list + [k]
+        if len(list) == n:
+            break
+    return list
+
 
 
 # ----------------------------------------------------------------------
